@@ -6,18 +6,18 @@ function saludo() {
         'italiano': { hola: 'Ciao', adios: 'Addio' },
         'aleman': { hola: 'Hallo', adios: 'Auf Wiedersehen' },
         'japones': { hola: 'Konnichiwa', adios: 'Sayonara' },
-        'nihongo': { hola: 'こんにちは', adios: 'さようなら' }
+        'hiragana': { hola: 'こんにちは', adios: 'さようなら' }
     };
 
     let continuar = true;
     while (continuar) {
         
         let idioma = prompt(
-            '¿En qué idioma quieres saludar? Opciones: ingles, portugues, frances, italiano, aleman, japones (o nihongo)'
+            '¿En qué idioma quieres saludar? Opciones: ingles, portugues, frances, italiano, aleman, japones, hiragana'
         );
         if (!idioma) return;
         idioma = idioma.toLowerCase();
-
+          
         let saludoTexto = '';
         let despedidaTexto = '';
         switch (idioma) {
@@ -45,9 +45,9 @@ function saludo() {
                 saludoTexto = idiomas.japones.hola;
                 despedidaTexto = idiomas.japones.adios;
                 break;
-            case 'nihongo':
-                saludoTexto = idiomas.nihongo.hola;
-                despedidaTexto = idiomas.nihongo.adios;
+            case 'hiragana':
+                saludoTexto = idiomas.hiragana.hola;
+                despedidaTexto = idiomas.hiragana.adios;
                 break;
             default:
                 alert('Idioma no reconocido. Intenta de nuevo.');
