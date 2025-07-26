@@ -13,7 +13,7 @@ function saludo() {
     while (continuar) {
         
         let idioma = prompt(
-            '¿En qué idioma quieres saludar? Opciones: ingles, portugues, frances, italiano, aleman, japones, hiragana'
+            '¿En qué idioma quieres saludar? Opciones: ingles, portugues, frances, italiano, aleman, japones (o hiragana)'
         );
         if (!idioma) return;
         idioma = idioma.toLowerCase();
