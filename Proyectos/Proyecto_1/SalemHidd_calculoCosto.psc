@@ -95,6 +95,7 @@ Algoritmo SalemHidd_calculoCosto
     Escribir "Subtotal después del cupón: $", componentesCosto(1)
     Escribir "Cantidad de artículos: ", cantidad
     Escribir "Descuento por cantidad: -$", descuentos(2)
+	Escribir "------------ POR PAGAR ---------------"
     Escribir "Subtotal total antes de impuestos: $", subtotalTotal
     Escribir "Impuestos (", impuesto, "%): $", componentesCosto(2)
     Escribir "Costo de envío (", destino, "): $", componentesCosto(4)
