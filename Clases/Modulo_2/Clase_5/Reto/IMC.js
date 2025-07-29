@@ -1,10 +1,10 @@
 function calculadoraIMC() {
 
     //pedimos al usuario que ingrese los datos necesarios para calcular el IMC
-    const pesoStr = prompt(`Ingrese su peso en Kg`);
-    const alturaStr = prompt(`Ingrese su altura en metros`);
+    const pesoStr = prompt("Por favor, ingrese su peso (kg):");             
+    const alturaStr = prompt("Por favor, ingrese su altura (m):");
 
-    // convertir todo a nuemros
+    // convertir todo a números
     const peso = parseFloat(pesoStr);
     const altura = parseFloat(alturaStr);
 
@@ -14,7 +14,7 @@ function calculadoraIMC() {
         console.log(`Por favor, ingrese números válidos.`); 
         return;
     }
-    let resultado;
+    let resultado;  
 
     // calcular el IMC
     const imc = peso / (altura * altura);
@@ -36,8 +36,8 @@ function calculadoraIMC() {
     }
 
     // Mostrar el resultado con dos decimales
-    console.log(`Su índice de masa corporal (IMC) es: ${imc.toFixed(2)}`);
-    console.log(`Clasificación según la OMS: ${clasificacion}`);
+    console.log(`Su IMC es: ${imc.toFixed(2)}\n`);
+    console.log(`Usted se encuentra en el rango de ${clasificacion.toLowerCase()}.`);
 }
 
 calculadoraIMC(); // llamamos a la funcion calculadora para que se ejecute.
