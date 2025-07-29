@@ -17,10 +17,10 @@ Importante recalcar que acá no importa el producto que sea, ya que es una calcu
 
 
 ### Descuento por Cupon
-Se pregunta si existe un cupón a aplicar. Se debe escribir Verdadero o Falso.
-En caso de ser verdadero, preguntará el % de descuento, por lo que hay que escribir un número entre 0 y 100 (exclusivos).
+Se pregunta si existe un cupón a aplicar. Se debe escribir si o no.
+En caso de que la respuesta sea si, preguntará el % de descuento, por lo que hay que escribir un número entre 0 y 100 (exclusivos).
 
-Se verifica que el cupon sea un numero entero en 1 y 99. Proporciona un mensaje de error claro si el valor ingresado es incorrecto.
+Se verifica que la respuesta si o no exclusivamente. Tambien verifica que el cupon sea un numero entero en 1 y 99. Proporciona un mensaje de error claro si el valor ingresado es incorrecto, y evitando que el programa se "caiga"/"cuelgue" en caso de haber una respuesta incorrecta. Esto se logró implementando cada caso con una sentencia tipo "Segun .. Hacer"
 
 ### Descuento por cantidad
 Más de 2 artículos: 5% de descuento
@@ -46,15 +46,16 @@ El envío internacional tiene un costo fijo del doble de costo fijo nacional, y 
 ### Desglose
 El desglose tiene el siguiente formato:
 
-     "------- DETALLE DE COSTO FINAL -------"
-     "Precio original unitario: $"
-     "Descuento por cupón: -$"
-     "Subtotal después del cupón: $"
-     "Cantidad de artículos: "
-     "Descuento por cantidad: -$"
-     "Impuestos (", impuesto, "%): $"
-	 "-------------- A PAGAR ---------------"
-	 "Subtotal sin envío: $"
-     "Costo de envío (", destino, "): $"
-     "TOTAL A PAGAR: $"
-	 "--------------------------------------"	
+    ------- DETALLE DE COSTO FINAL -------"
+    Precio original unitario: $
+    Descuento por cupón: -$
+    Subtotal después del cupón: $
+    Cantidad de artículos: 
+    Descuento por cantidad: -$
+	------------ POR PAGAR ---------------"
+    Subtotal total antes de impuestos: $
+    Impuestos (", impuesto, "%): $
+    Costo de envío (", destino, "): $
+    --------------------------------------"
+    TOTAL A PAGAR: $
+    --------------------------------------"		

@@ -1,57 +1,79 @@
 Algoritmo SalemHidd_calculoCosto
-    // Variables básicas
+    
+	// Definicion de Variables básicas
     Definir precioOriginal, porcentajeDescuento, impuesto, peso, precioPeso, totalFinal, costoFijoEnvioNacional Como Real
     Definir cantidad Como Entero
-    Definir tieneCupon Como Logico
     Definir destino Como Caracter
+	Definir respuestaCupon como Cadena
 	
     // Arreglos para descuentos y componentes del costo
     Definir descuentos, componentesCosto Como Real
     Dimension descuentos(2)         // [1]: cupón, [2]: por cantidad
     Dimension componentesCosto(4)   // [1]: subtotal, [2]: impuestos, [3]: descuentos totales, [4]: envío
 	
-    costoFijoEnvioNacional <- 10 // Costo fijo de 10
-    impuesto <- 19 // IVA del 19%
+	//Se nombran los indices del vector de Descuentos
+    cuponDcto = 1
+	cantDcto = 2
+	
+	//Se nombran los indices del vector de Costo
+	costoSubtotal = 1
+	costoImp = 2
+	costoDesc = 3 
+	costoEnvio = 4
+	
+	//Costos Fijos
+	costoFijoEnvioNacional = 10 // Costo fijo de 10
+    impuesto = 19 // IVA del 19%
+	
 	
     // Entrada de datos
     Escribir "Ingrese el precio original del producto:"
     Leer precioOriginal
 	
-    Escribir "¿Tiene cupón de descuento? (Verdadero/Falso):"
-    Leer tieneCupon
-	
-    Si tieneCupon Entonces
-        Repetir
-            Escribir "Ingrese el porcentaje de descuento (entre 1 y 99):"
-            Leer porcentajeDescuento;
-			
-            Si porcentajeDescuento < 1 O porcentajeDescuento >= 100 Entonces
-                Escribir "ERROR: El porcentaje debe estar entre 1 y 99."
-            FinSi
-        Hasta Que porcentajeDescuento >= 1 Y porcentajeDescuento < 100;
+    Repetir
+		Escribir "¿Tiene cupón de descuento? (si/no):"
+		Leer respuestaCupon
+		respuestaCupon <- Minusculas(respuestaCupon)
 		
-        descuentos(1) <- precioOriginal * (porcentajeDescuento / 100);
-    Sino
-        descuentos(1) <- 0;
-    FinSi
+		Si respuestaCupon <> "si" Y respuestaCupon <> "no" Entonces
+			Escribir "ERROR: Responda solo con si o no."
+		FinSi
+	Hasta Que respuestaCupon = "si" O respuestaCupon = "no"
+	
+	Segun respuestaCupon Hacer
+		"si":
+			Repetir
+				Escribir "Ingrese el porcentaje de descuento (entre 1 y 99):"
+				Leer porcentajeDescuento
+				
+				Si porcentajeDescuento < 1 O porcentajeDescuento >= 100 Entonces
+					Escribir "ERROR: El porcentaje debe estar entre 1 y 99."
+				FinSi
+			Hasta Que porcentajeDescuento >= 1 Y porcentajeDescuento < 100
+			
+			descuentos(cuponDcto) <- precioOriginal * (porcentajeDescuento / 100)
+		"no":
+			descuentos(cuponDcto) <- 0
+	FinSegun
+
 	
     // Subtotal después del descuento por cupón (precio unitario)
-    componentesCosto(1) <- precioOriginal - descuentos(1)
+    componentesCosto(cuponDcto) <- precioOriginal - descuentos(cuponDcto)
 	
     // Cantidad y descuento por cantidad
     Escribir "Ingrese la cantidad de artículos:"
     Leer cantidad
 	
     Si cantidad > 10 Entonces
-        descuentos(2) <- (componentesCosto(1) * cantidad) * 0.15 // 15% de descuento
+        descuentos(cantDcto) <- (componentesCosto(costoSubtotal) * cantidad) * 0.15 // 15% de descuento
     Sino
         Si cantidad > 5 Entonces
-            descuentos(2) <- (componentesCosto(1) * cantidad) * 0.10 // 10%
+            descuentos(cantDcto) <- (componentesCosto(costoSubtotal) * cantidad) * 0.10 // 10%
         Sino
             Si cantidad >= 2 Entonces
-                descuentos(2) <- (componentesCosto(1) * cantidad) * 0.05 // 5%
+                descuentos(cantDcto) <- (componentesCosto(costoSubtotal) * cantidad) * 0.05 // 5%
             Sino
-                descuentos(2) <- 0
+                descuentos(cantDcto) <- 0
             FinSi
         FinSi
     FinSi
@@ -65,40 +87,40 @@ Algoritmo SalemHidd_calculoCosto
 	
     Segun destino Hacer
         "local":
-            componentesCosto(4) <- costoFijoEnvioNacional + peso * 2
+            componentesCosto(costoEnvio) <- costoFijoEnvioNacional + peso * 2
         "nacional":
-            componentesCosto(4) <- costoFijoEnvioNacional + peso * 3
+            componentesCosto(costoEnvio) <- costoFijoEnvioNacional + peso * 3
         "internacional":
-            componentesCosto(4) <- 2 * costoFijoEnvioNacional + peso * 10
+            componentesCosto(costoEnvio) <- 2 * costoFijoEnvioNacional + peso * 10
         De Otro Modo:
             Escribir "Destino no válido. Se usará tarifa nacional por defecto."
-            componentesCosto(4) <- costoFijoEnvioNacional + peso * 3
+            componentesCosto(costoEnvio) <- costoFijoEnvioNacional + peso * 3
     FinSegun
 	
     // Recalcular subtotal total (después de cupón y por cantidad)
     Definir subtotalTotal Como Real
-    subtotalTotal <- (componentesCosto(1) * cantidad) - descuentos(2)
+    subtotalTotal <- (componentesCosto(costoSubtotal) * cantidad) - descuentos(cantDcto)
 	
     // Calcular impuesto sobre el subtotal total
-    componentesCosto(2) <- subtotalTotal * (impuesto / 100)
+    componentesCosto(costoImp) <- subtotalTotal * (impuesto / 100)
 	
     // Total de descuentos
-    componentesCosto(3) <- descuentos(1) + descuentos(2)
+    componentesCosto(costoDesc) <- descuentos(cuponDcto) + descuentos(cantDcto)
 	
     // Cálculo del total final
-    totalFinal <- subtotalTotal + componentesCosto(2) + componentesCosto(4)
+    totalFinal <- subtotalTotal + componentesCosto(costoImp) + componentesCosto(costoEnvio)
 	
     // Mostrar desglose
     Escribir "------- DETALLE DE COSTO FINAL -------"
     Escribir "Precio original unitario: $", precioOriginal
-    Escribir "Descuento por cupón: -$", descuentos(1)
-    Escribir "Subtotal después del cupón: $", componentesCosto(1)
+    Escribir "Descuento por cupón: -$", descuentos(cuponDcto)
+    Escribir "Subtotal después del cupón: $", componentesCosto(costoSubtotal)
     Escribir "Cantidad de artículos: ", cantidad
-    Escribir "Descuento por cantidad: -$", descuentos(2)
+    Escribir "Descuento por cantidad: -$", descuentos(cantDcto)
 	Escribir "------------ POR PAGAR ---------------"
     Escribir "Subtotal total antes de impuestos: $", subtotalTotal
-    Escribir "Impuestos (", impuesto, "%): $", componentesCosto(2)
-    Escribir "Costo de envío (", destino, "): $", componentesCosto(4)
+    Escribir "Impuestos (", impuesto, "%): $", componentesCosto(costoImp)
+    Escribir "Costo de envío (", destino, "): $", componentesCosto(costoEnvio)
     Escribir "--------------------------------------"
     Escribir "TOTAL A PAGAR: $", totalFinal
     Escribir "--------------------------------------"	
