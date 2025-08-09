@@ -39,8 +39,7 @@ const mostrarLibros = () => {
 };
 
 
-
-window.agregarLibro = agregarLibro;
-window.eliminarLibro = eliminarLibro;
-window.buscarLibro = buscarLibro;
-window.mostrarLibros = mostrarLibros;
+// window.agregarLibro = agregarLibro;
+// window.eliminarLibro = eliminarLibro;
+// window.buscarLibro = buscarLibro;
+// window.mostrarLibros = mostrarLibros;
