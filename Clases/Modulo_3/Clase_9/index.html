@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> <!--Almacena los metadatos del documento-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="UDD Devs">
+    <meta 
+        name="description" 
+        content="Página de ejemplo para la introducción de HTML para los estudiantes del bootcamp Desarrollo Web FullStack UDD"
+    > <!--Extensión de 120 a 160 caracteres ideal por SEO-->
+    <meta name="robots" content="index, follow"> <!--Indexar la página y seguir los links-->
+    <meta name="keywords" content="HTML, CSS, JavaScript, web, developer, desarrollo, fullstack, Bootcamp, UDD">
+
+    <!--Open Graph, importante para el SEO, lo premia-->
+    <meta property="og:title" content="Primera página HTML Bootcamp UDD">
+    <meta 
+        property="og:description" 
+        content="Aprendiendo a crear nuestra primera página web con HTML en el Bootcamp UDD"
+    >
+    <meta property="og:image" content="./assets/img/leon.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ejemplo.cl">
+    <meta property="og:site_name" content="Bootcamp UDD">
+
+    <title>Primera pagina html Bootcamp UDD</title>
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body> <!--Almacenar todo lo que se va a renderizar en pantalla-->
+
+    <nav> <!--Barra de navegación-->
+        <div>
+            <h2>Lista ordenada</h2>
+            <ol type="I" start="2"> <!--Ordered List (OL)-->
+                <li>Planificar página web</li> <!--List Item-->
+                <li>Armar estructura html</li>
+                <li>Agregar estilos CSS</li>
+                <li>Agregar interactividad con Javascript</li>
+            </ol>
+        </div>
+        
+        <div>
+            <h2>Listas desordenadas</h2>
+            <ul> <!--Unordered List-->
+                <li><a href="">Home</a></li>
+                <li>
+                    <a href="#about">Dinosaurio</a>
+                </li>
+                <li>Contacts</li>
+                <li>
+                    <a href="./moreInfo.html">More Info</a>
+                </li>
+            </ul>
+            <a href="https://www.google.com/?hl=es" target="_blank">Ir a Google</a>
+        </div>
+    </nav>
+    
+    <header> <!--Encabezado principal-->
+        <h1>Mi primera Web! 👽</h1> <!--Esta etiqueta es para los titulos-->
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. At rem, reiciendis quos corrupti incidunt eaque quibusdam assumenda. Et possimus, eum error exercitationem, libero ullam impedit inventore aperiam iusto quasi omnis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dignissimos itaque, modi consequuntur consequatur accusantium neque illo, corrupti, distinctio in omnis. Consequatur facere ducimus impedit dignissimos laborum voluptatem velit maiores!</p>
+    </header>
+    <main>
+        <section id="about"> <!--Sección especifica dentro de la página-->
+            <h2>Sobre nosotros</h2>
+
+            <p>Conoce a nuestro equipo</p>
+            <article> <!--Sección más especifica dentro de un conjunto mayor-->
+                <img 
+                    src="./assets/img/leon.jpg" 
+                    alt="Foto Leon"
+                    width="200"
+                    height="200"
+                    title ="Leon mirando el infinito"
+                    loading="lazy"
+                > <!--agrgar imagenes con sus respectivos atributos-->
+                
+                <h3>Pablo Reydet</h3>
+                <p>Lider en desarrollo Frontend</p>
+            </article>
+    
+            <article> <!--Sección más especifica dentro de un conjunto mayor-->
+                <h3>Javiera Sepulveda</h3>
+                <p>Lider en desarrollo Backend</p>
+            </article>
+    
+            <article> <!--Sección más especifica dentro de un conjunto mayor-->
+                <h3>Camilo Hache</h3>
+                <p>Administrador de Bases de Datos</p>
+            </article>
+        </section>
+    
+        <section> <!--Sección especifica dentro de la página-->
+            <form>
+                <div>
+                    <label for="e-mail">Correo</label>
+                    <input type="email" id="e-mail" name="e-mail" placeholder="correo@example.com">
+                    <span class="error-message" id="error-e-mail"></span>
+                </div> <!-- Importante, el for del label debe corresponder con el name del input! el SEO lo premia -->
+                
+                <div>
+                    <label for="texto">Texto</label>
+                    <input type="text" id="texto" name="texto" placeholder="Ingrese su texto">
+                </div>
+
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="********">
+                    <span class="error-message" id="error-password"></span>
+                </div>
+            
+                <div>
+                    <label for="numero">Número</label>
+                    <input type="number" id="numero" name="numero" min="1" max="100" step="5">
+                </div>
+                
+                <div>
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" name="date">
+                </div>
+
+                <div>
+                    <label for="checkbox">Aceptar términos y condiciones</label>
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                </div>
+
+                <div>
+                    <label for="radio">Opción</label>
+                    <input type="radio" id="radio1" name="radio" value="opcion1">
+                    <label for="radio1">Opción 1</label>
+                    <input type="radio" id="radio2" name="radio" value="opcion2">
+                    <label for="radio2">Opción 2</label>
+                </div>
+
+                <div>
+                    <label for="range">Rango</label>
+                    <div>
+                        <span>5</span><input type="range" name="range" id="range" min="1" max="100" step="10" value="50"><span>100</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Escribe tu mensaje aquí"></textarea>
+
+                </div>
+
+                <div>
+                    <label for="color">Color</label>
+                    <input type="color" id="color" name="color" value="#ff0000">
+                </div>
+
+                <div>
+                    <label for="file">Archivo</label>
+                    <input type="file" id="file" name="file">
+                </div>
+
+                <div>
+                    <label for="search">Buscar</label>
+                    <input type="search" id="search" name="search" placeholder="Buscar...">
+                </div>
+
+                <div>
+                    <label for="url">URL</label>
+                    <input type="url" id="url" name="url" placeholder="https://example.com">
+                </div>
+
+                <button type="submit">Enviar</button>
+                
+
+           </form>
+        </section>
+    
+        <section> <!--Sección especifica dentro de la página-->
+            <article> <!--Sección más especifica dentro de un conjunto mayor-->
+    
+            </article>
+    
+            <article> <!--Sección más especifica dentro de un conjunto mayor-->
+    
+            </article>
+    
+            <article> <!--Sección más especifica dentro de un conjunto mayor-->
+    
+            </article>
+        </section>
+    </main>
+
+    <aside> <!--Contenido aparte, usualmente para publicidad o redirección a otros contenidos relacionados-->
+
+    </aside>
+
+    <footer> <!--Pie de página-->
+
+    </footer>
+
+    
+    <h2>Soy un titulo de segundo orden</h2>
+    <p>Soy un texto rebelde fuera del body</p>
+    <h3>Soy un titulo de tercer orden</h3>
+    <h4>Soy un titulo de cuarto orden</h4>
+    <h5>Soy un titulo de quinto orden</h5>
+    <h6>Soy un titulo de sexto orden</h6>
+
+
+        
+    <div>
+        <div>
+            <h2>Sobre gatos</h2>
+            <p>Información sobre los gatos</p>
+        </div>
+        
+        <div>
+            <h2>Sobre los perros</h2>
+            <p>Información sobre los perros</p>
+        </div>
+        
+        <p>Soy un parrafo nuevo y puedo tener una extensión enorme</p>
+        
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Fuga mollitia consequuntur, quas odio rem maxime deserunt 
+            repellat quasi fugit amet saepe similique cupiditate deleniti 
+            voluptas illo. Distinctio, repellat. Praesentium, incidunt.
+        </p>
+    </div>
+    
+</body>
+
+</html>
+
+<!--SEO-->
+
+
+
+
+
+
+
+
+
