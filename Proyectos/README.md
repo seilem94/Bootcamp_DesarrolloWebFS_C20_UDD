@@ -7,10 +7,13 @@ En cada carpeta tambien existirá un pequeño Readme.md que resuma lo básico.
 ## Proyecto 1
 
 Algoritmo de sistema de costos.
+
 Se genera un algoritmo para el calculo de costos de un producto en especifico, considerando descuentos, cupones, impuesto y envío.
 
 ## Proyecto 2
-TBA
+Sistema de Votación en JavaScript.
+
+Se desarrolla un programa en JavaScript que permita a los usuarios crear encuestas, votar y ver los resultados aplicando comandos en terminal.
 
 ## Proyecto 3
 TBA
