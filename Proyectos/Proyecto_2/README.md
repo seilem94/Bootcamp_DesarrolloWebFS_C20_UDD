@@ -10,12 +10,13 @@ El desarrollo se realizó en dos enfoques distintos:
 ## Estructura del Proyecto
 
 Proyect_2/\
-├── poo/\
-│   ├── index.html   # Solución con Programación Orientada a Objetos\
-│   └── index.js\
-├── pf/\
-│   ├── index.html   # Solución con Programación Funcional\
-│   └── index.js\
+|── poo/\
+|   ├── index.html   # Solución con Programación Orientada a Objetos\
+|   └── index.js\
+|
+|── pf/\
+|   ├── index.html   # Solución con Programación Funcional\
+|   └── index.js\
 └── README.md\
 
 ------------------------------------------------------------
