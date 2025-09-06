@@ -6,6 +6,16 @@ El desarrollo se realizó en dos enfoques distintos:
 - Programación Orientada a Objetos (POO)
 - Programación Funcional (PF)
 
+Si bien se utilizán dos enfoques distintos para la programación del codigo que permitirá las votaciones a traves del navegador, la interacción con el usuario será similar (por no decir igual).
+
+Primero, el usuario se enfrentará a un Menú con X opciones:\
+    1) Crear Encuesta/Preguntas\
+    2) Responder Preguntas\
+    3) Ver Votaciones de la(s) Encuesta(s)\
+    4) Salir\
+
+
+
 ------------------------------------------------------------
 ## Estructura del Proyecto
 
