@@ -17,6 +17,41 @@ Enfoque PF
 
 ### PF
 
+### Funciones Puras
+
+#### `agregarEncuesta(estado, encuesta)`
+- **Parámetros:** `estado` actual y objeto `encuesta`.  
+- **Función:** Retorna un **nuevo estado** con la encuesta agregada.  
+- **Características:** No modifica el estado original (inmutabilidad).  
+
+#### `votar(estado, indiceEncuesta, indicePregunta, indiceOpcion)`
+- **Parámetros:** `estado` actual, índice de encuesta, índice de pregunta y opción elegida.  
+- **Función:** Retorna un **nuevo estado** donde se incrementa el conteo de la opción seleccionada.  
+- **Características:** Mantiene la inmutabilidad; no altera directamente los objetos originales.  
+
+### Funciones de Interacción (con el usuario)
+
+#### `crearEncuesta(estado)`
+- **Función:** Permite al usuario crear una nueva encuesta mediante `prompt`.  
+- **Validaciones:**  
+  - Mínimo 8 preguntas.  
+  - Mínimo 2 opciones por pregunta.  
+  - Textos no vacíos.  
+- **Retorna:** Un **nuevo estado** con la encuesta agregada.  
+
+#### `responderEncuesta(estado)`
+- **Función:** Permite al usuario seleccionar una encuesta existente y responder cada pregunta.  
+- **Detalles:**  
+  - Muestra preguntas y opciones con `prompt`.  
+  - Usa `votar` para actualizar conteos de votos.  
+- **Retorna:** Un **nuevo estado** con los votos actualizados.  
+
+#### `mostrarResultados(estado)`
+- **Función:** Recorre todas las encuestas y sus preguntas.  
+- **Detalles:**  
+  - Muestra en consola cada pregunta con las opciones y la cantidad de votos.  
+- **Características:** No modifica el estado.  
+
 ### POO
 
 ------------------------------------------------------------
@@ -43,7 +78,7 @@ La opción 1) esta construida  con la siguiente estructura para el usuario:
 
 Con la opcion 2) se presentarán las Encuesta(s) creadas, y solicitará a Usuario seleccionar alguna para su votación.
     
-    -En esta opción se responde solo en base al número de la opcion y no en su contenido. Cualquier valor que sea un número fuera del rango u otro carácter sera una opción invalida.\
+    -En esta opción se responde solo en base al número de la opcion y no en su contenido. Cualquier valor que sea un número fuera del rango u otro carácter sera una opción invalida.
 
 Con la opción 3) se imprimirán los resultados de todas las encuestas por consola.
     
@@ -52,8 +87,8 @@ Con la opción 3) se imprimirán los resultados de todas las encuestas por conso
 
 
 #### Consideraciones:
--   Se asume la capacidad de poder realizar N Encuestas, con sus respectivos nombres, pero por manejo de datos volatiles, cada vez que se recargue el navegador se perderan las Encuestas, con sus respectivas preguntas y respuestas.\
--   Una vez creadas las preguntas y respuestas, la encuesta no puede ser modificada ni en cantidad de preguntas y/o respuestas de cada preguntas, ni en su contenido.\
+-   Se asume la capacidad de poder realizar N Encuestas, con sus respectivos nombres, pero por manejo de datos volatiles, cada vez que se recargue el navegador se perderan las Encuestas, con sus respectivas preguntas y respuestas.
+-   Una vez creadas las preguntas y respuestas, la encuesta no puede ser modificada ni en cantidad de preguntas y/o respuestas de cada preguntas, ni en su contenido.
 -   La interacción de ingreso de datos con el usuario se hace a traves de la sentencia "prompt".
 
 ------------------------------------------------------------
