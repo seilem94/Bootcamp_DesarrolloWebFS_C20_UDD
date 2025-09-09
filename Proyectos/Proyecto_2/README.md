@@ -17,6 +17,8 @@ Enfoque PF
 
 ### PF
 
+Se utilizaron solo funciones puras y variables inmutables para respetar los principios del paradigma de programación funcional. Ademas se crearon las funciones para controlar el flujo principal y la interacción con el usuario, procurando respetar estos mismos principios.
+
 ### Funciones Puras
 
 #### `agregarEncuesta(estado, encuesta)`
