@@ -13,7 +13,7 @@ Se genera un algoritmo para el calculo de costos de un producto en especifico, c
 ## Proyecto 2
 Sistema de Votación en JavaScript.
 
-Se desarrolla un programa en JavaScript que permita a los usuarios crear encuestas, votar y ver los resultados aplicando comandos en terminal.
+Se desarrolla un programa en JavaScript que permita a los usuarios crear encuestas, votar y ver los resultados aplicando comandos en terminal. Se desarrolla un algoritmo similar pero con dos enfoques distintos; Programacion Funcional (PF) y Programación Orientada a Objetos (POO).
 
 ## Proyecto 3
 TBA
