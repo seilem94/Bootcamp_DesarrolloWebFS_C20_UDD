@@ -54,6 +54,48 @@ Enfoque PF
 
 ### POO
 
+Al comienzo se habái creado solo 3 Clases: Pregunta, Encuesta y SistemaEncuesta, pero para desacoplar más el sistema en el caso en que se necesite escalar el sistema en el futuro, se creó una cuarta clase: Respuesta. De esta forma el codigo final quedó con estas 4 clases que pasan de resumirse a continuación.
+
+#### 1. Clase `Respuesta`
+- **Propósito:** Representa una opción de respuesta dentro de una pregunta.  
+- **Atributos:**  
+  - `texto`: el contenido de la respuesta.  
+  - `votos`: contador de votos que recibe la respuesta.  
+- **Métodos:**  
+  - `votar()`: incrementa el contador de votos en 1.  
+  - `mostrarResultado()`: muestra en consola el texto de la respuesta y el número de votos.  
+
+#### 2. Clase `Pregunta`
+- **Propósito:** Representa una pregunta dentro de una encuesta.  
+- **Atributos:**  
+  - `texto`: enunciado de la pregunta.  
+  - `respuestas`: array de objetos `Respuesta`.  
+- **Métodos:**  
+  - `agregarRespuesta(respuesta)`: agrega una opción a la pregunta.  
+  - `votar(indiceRespuesta)`: registra un voto en la opción seleccionada.  
+  - `mostrarResultados()`: imprime en consola la pregunta y los resultados de todas sus respuestas.  
+
+#### 3. Clase `Encuesta`
+- **Propósito:** Agrupa preguntas para formar una encuesta completa.  
+- **Atributos:**  
+  - `titulo`: título de la encuesta.  
+  - `preguntas`: array de objetos `Pregunta`.  
+- **Métodos:**  
+  - `agregarPregunta(pregunta)`: agrega una pregunta a la encuesta.  
+  - `responder()`: permite al usuario votar en cada pregunta usando `prompt`, validando la opción seleccionada.  
+  - `mostrarResultados()`: muestra en consola el título de la encuesta y los resultados de todas las preguntas.  
+
+#### 4. Clase `SistemaEncuestas`
+- **Propósito:** Gestiona el flujo completo del sistema de encuestas.  
+- **Atributos:**  
+  - `encuestas`: array de objetos `Encuesta`.  
+- **Métodos:**  
+  - `crearEncuesta()`: permite al usuario crear una encuesta, agregar preguntas y opciones con validación.  
+  - `responderEncuesta()`: permite seleccionar una encuesta y responder todas sus preguntas.  
+  - `mostrarResultados()`: muestra los resultados de todas las encuestas en la consola.  
+  - `ejecutar()`: bucle principal que muestra el menú, solicita opciones y ejecuta las acciones correspondientes.  
+
+
 ------------------------------------------------------------
 ### Vista Previa
 
