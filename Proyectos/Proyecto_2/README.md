@@ -5,12 +5,12 @@ El desarrollo se realizó en dos enfoques distintos:
 
 
 Enfoque POO
-- Se utiliza "class" para modelar Encuesta, Pregunta y Opción.\
-- Los votos actualizan en tiempo real, y se muestran por Consola\
+- Se utiliza "class" para modelar Encuesta, Pregunta y Opción.
+- Los votos actualizan en tiempo real, y se muestran por Consola
 
 Enfoque PF
-- Se usan funciones puras e inmutabilidad.\
-- Los votos generan nuevos estados y se muestran por Consola.\
+- Se usan funciones puras e inmutabilidad.
+- Los votos generan nuevos estados, y se muestran por Consola.
 
 ------------------------------------------------------------
 ## Explicacion de Cada Paradigma
