@@ -31,17 +31,20 @@ La opción 1) esta construida  con la siguiente estructura para el usuario:
     -Luego, se solicita crear las preguntas.\
     -Luego de la creación de las preguntas, preguntará el número de alternativas de la pregunta.\
     -Despues seguirá con el mismo proceso por el resto de las preguntas.\
+Una vez creadas las preguntas y respuestas, la encuesta no puede ser modificada ni en cantidad de preguntas y/o respuestas de cada preguntas, ni en su contenido.
 
-Con la opcion 2) se presentarán las Encuesta(s) creadas, y solicitará a Usuario seleccionar alguna para su votación.
+Con la opcion 2) se presentarán las Encuesta(s) creadas, y solicitará a Usuario seleccionar alguna para su votación.\
+    -En esta opción se responde solo en base al número de la opcion y no en su contenido. Cualquier valor que sea un número fuera del rango u otro carácter sera una opción invalida.\
 
-Con la opción 3) se imprimirán los resultados de todas las encuestas por consola.
+Con la opción 3) se imprimirán los resultados de todas las encuestas por consola.\
+    -Al seleccionar la opción 3, se pueden ver las votaciones de cada encuesta a traves de la consola.\
+    -Se implementa el comando "console.clear()" al comienzo de la función para limpiar la consola y mostrar la información de forma ordenada, pero el navegador no lleva a cabo la instrucción. Se deja para futuras pruebas.
 
-Se asume la capacidad de poder realizar N Encuestas, con sus respectivos nombres, pero por manejo de datos volatiles, cada vez que se recargue el navegador se perderan las Encuestas, con sus respectivas preguntas y respuestas.
 
-La interacción de ingreso de datos con el usuario se hace a traves de la sentencia "prompt".
+### Consideraciones:
 
-Cada vez que se realiza una votación, por consola se imprimen los votos en tiempo real. De igual manera, al seleccionar la opción 3, se pueden ver las votaciones de cada encuesta a traves de la consola.
-
+Se asume la capacidad de poder realizar N Encuestas, con sus respectivos nombres, pero por manejo de datos volatiles, cada vez que se recargue el navegador se perderan las Encuestas, con sus respectivas preguntas y respuestas.\
+La interacción de ingreso de datos con el usuario se hace a traves de la sentencia "prompt".\
 
 ------------------------------------------------------------
 ## Estructura del Proyecto
