@@ -17,14 +17,18 @@ ID -> Este es el selector más especifco y se invoca con el signo # y el atribut
     --primary-color-900: #1d1d45;
     --primary-color-400: #5d79b3;
     --secondary-color-500: #F33052;
-
+    
+    /* Nuevos colores para títulos */
+    --title-color-light: #E8D5C4;  /* Color crema suave */
+    --title-color-accent: #FFB100; /* Dorado cálido */
+    --title-color-dark: #3A3845;   /* Gris azulado oscuro */
+    
     --neutral-white: #f5f5f5;
 
     --title-font: 'Open Sans', sans-serif;
     --body-font: 'Montserrat', Verdana;
 
     --line-default-height: 1.5
-
 }
 
 html { /* Selector de etiqueta global o universal - Para modificar tamaños */
@@ -132,9 +136,10 @@ button {
 header {
     height: 100vh;
     background-image: url('../img/hero.jpg');
-
+    background-size: cover; /* Reducimos al 50% del tamaño original */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
     padding: 3rem;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,12 +149,15 @@ header {
 h1 {
     font-family: var(--title-font);
     font-size: 4rem;
-    color: var(--secondary-color-500);
+    color: var(--title-color-accent);
+    text-shadow: 2px 2px 4px var(--title-color-dark);
+    font-weight: 800;
 }
 
-
 header p {
-    font-size: 2rem
+    font-size: 2rem;
+    color: var(--title-color-light);
+    text-shadow: 1px 1px 3px var(--title-color-dark);
 }
 
 main {
