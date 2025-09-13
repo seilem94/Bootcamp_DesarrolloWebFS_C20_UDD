@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+    <title>Intro CSS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- <style> /* Es MALA PRACTICA  */
+        header {
+            background-color: royalblue;
+            color: aliceblue;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- 
+    Jose: Crear un Navbar sencillo que tenga un espacio para un logo "LOGO" una lista desordenada con items de navegación
+        Un Botón de Iniciar Sesión
+      -->
+    <nav class="d-flex flex-between-center">
+        <img class="navbar-logo transition3seg" src="./assets/img/favicon.svg" alt="Logo" width="40">
+        <ul class="navbar-items d-flex flex-center">
+            <li class="navbar-item transition3seg"><a href="#animales">Animales</a></li>
+            <li class="navbar-item transition3seg"><a href="#contacto">Contacto</a></li>
+            <li class="navbar-item transition3seg"><a href="#articulos">Articulos</a></li>
+            <li class="navbar-item transition3seg"><a href="#footer">Footer</a></li>
+        </ul>
+        <div>
+            <button class="transition3seg login-btn">Iniciar Sesión</button>
+            <button class="transition3seg register-btn">Registrate</button>
+        </div>
+    </nav>
+    <header>
+        <h1>Mi primera página con CSS</h1> <!--Cascading Styling Sheet-->
+        <p>Experimentando con estilos nuevos para mis proyectos</p>
+    </header>
+
+     <main>
+        <!-- <section style="background-color: brown; color: white;"> -->
+        <section class="about-section">
+            <h2>Titulo de la sección</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate distinctio reprehenderit explicabo dicta ipsum repudiandae nesciunt aut accusantium iure illum, facilis dolorem veniam officiis mollitia ullam obcaecati nobis iusto maiores!
+                Culpa deserunt libero itaque laudantium cumque voluptates, assumenda maiores fugiat illum ut sit ab sapiente consequuntur tempore pariatur neque, nostrum eos. Sapiente, voluptas adipisci! Id tempore dicta officia quisquam fuga.
+                Illum modi officia aliquid esse, dolorum libero vitae nobis ex, quas aut nostrum numquam necessitatibus perspiciatis. Accusantium facilis provident illo asperiores maiores, quos ducimus magni ipsam dicta laboriosam doloribus placeat?
+                Ex tempora suscipit quibusdam porro. Impedit quaerat architecto beatae exercitationem. Praesentium beatae aliquam corporis reiciendis excepturi quod ipsa! Rem, necessitatibus ipsa tenetur illo esse nisi explicabo beatae officia alias placeat?
+                Reiciendis quas dolorem reprehenderit, earum iste quaerat cumque a atque, dolore magni error delectus, molestiae accusamus ullam id neque est tenetur incidunt. Enim, officia optio suscipit est exercitationem culpa asperiores!
+                Non, quos, ullam vel fugit odio est enim laborum eius quod distinctio saepe aperiam placeat dicta! Sapiente quibusdam saepe commodi quae tenetur! Explicabo officiis maiores iure laboriosam pariatur magni dicta.
+                Temporibus iure quasi ipsum in molestias, exercitationem culpa corporis veritatis ut voluptatibus ad libero quam reprehenderit odit delectus, enim nisi a deserunt incidunt modi nihil hic obcaecati est inventore? Vel.
+                Laborum, aliquam repellat? Deserunt culpa doloribus minima numquam facilis ullam amet ad, eaque ipsa atque cum nihil id quos optio a laboriosam. Beatae cupiditate illum eveniet exercitationem delectus quia provident.
+                Voluptatum qui iste nulla est id tempore beatae a temporibus cupiditate. Odio rerum molestiae consequatur maxime vitae eum iste! Maxime perspiciatis dolor, esse dolores repellat ex quam corporis minus tempore.
+                Accusamus, quidem. Saepe veritatis neque dolorum repudiandae possimus a dignissimos! Debitis voluptate quia rerum fugiat inventore unde totam repudiandae deleniti ea perspiciatis esse optio, quibusdam soluta molestiae placeat illum vel!
+                Quasi unde dolore illum explicabo voluptates? Inventore est asperiores, quae deleniti beatae, ut corrupti vel hic omnis exercitationem id sit! Incidunt sit quis provident, ullam perspiciatis tempore iure! Ratione, nihil?
+                Quasi aperiam debitis a voluptates provident, illo consequatur. Tempora, corporis veritatis. Ducimus, vero adipisci quidem sed facilis ullam maxime, rem doloremque dolorum voluptas id. Corporis est saepe quos incidunt distinctio!
+                Ut perferendis ratione rem saepe odio eaque laudantium? Eius totam assumenda, unde placeat iure minus distinctio iste velit excepturi animi maiores. Veritatis eligendi, iste magni sapiente quidem illum voluptatem soluta!
+                Similique, aliquid dicta animi nesciunt aspernatur rerum tempore reiciendis accusantium omnis dolorem sapiente placeat est. Sequi hic in qui saepe quo maiores, non iste optio enim facere, rerum sed perferendis.
+                Quod neque doloremque odio eum magni natus, consectetur ratione iusto accusamus perferendis reiciendis illo vel nostrum rem, aspernatur provident, cumque a voluptate assumenda fugit! Dignissimos dolor minima nesciunt cum enim?
+                Molestiae hic ab numquam ratione odio quisquam porro dolorem perferendis dignissimos, sed nemo. Natus ipsum delectus quibusdam excepturi amet molestiae, alias tempora veniam iste in provident incidunt voluptate hic qui!
+                Sapiente voluptatem, error cupiditate placeat facilis fugiat reiciendis earum. Doloribus natus ullam provident voluptas culpa libero necessitatibus reprehenderit magnam cupiditate optio! Alias eveniet tempora, a reprehenderit quis harum quaerat expedita.
+                Cupiditate rem ipsam voluptas. Dolor suscipit impedit nihil consequatur pariatur est quos, corrupti optio hic et facere modi tempora fuga possimus totam reprehenderit nesciunt adipisci, exercitationem sapiente illo sed dolore?
+                Illum quod totam unde perferendis quae. Voluptates impedit, voluptas ab libero incidunt esse repellat cumque! Ad odio facere unde sint autem ut consequuntur reprehenderit sunt sit debitis laudantium, qui ex.
+            </p>
+        </section>
+
+        <section id="animales">
+            <article class="card">
+                <h2>🦙 Vicuña — Energía de Resistencia</h2>
+                <img class="card-img" src="https://www.caminosalkantay.com/blog/wp-content/uploads/2024/06/Vicuna-montana-Ausangate.jpg" alt="en los Andes">
+                <p>Originaria de los Andes, la vicuña representa fortaleza, servicio y conexión con la tierra. Su presencia tranquila y su capacidad de adaptación la convierten en símbolo de resiliencia y equilibrio. En culturas andinas, se asocia con la sabiduría ancestral y la protección espiritual.</p>
+            </article>
+
+            <article class="card">
+                <h2>🐬 Tonina — Energía de Alegría</h2>
+                <img class="card-img" src="https://www.ecoticias.com/wp-content/uploads/2022/01/RXHD_1017641-300x214-1.jpg" alt="Tonina saltando en el mar">
+                <p>Las toninas, delfines del sur, irradian libertad y juego. Su danza en el agua y su curiosidad natural evocan alegría, conexión emocional y fluidez. En tradiciones costeras, se las considera guardianas del mar y mensajeras de armonía entre mundos.</p>
+            </article>
+            <article class="card">
+                <h2>🐭 Chinchilla — Energía de Protección</h2>
+                <img class="card-img" src="https://stkittsvet.co.uk/wp-content/uploads/2019/06/images-chincilla.jpg" alt="Chinchilla en su hábitat">
+                <p>Pequeña y delicada, la chinchilla simboliza sensibilidad y refugio. Su pelaje suave y su naturaleza nocturna la vinculan con lo sutil y lo intuitivo. En la cosmovisión andina, se asocia con el cuidado del entorno y la conexión con lo invisible.</p>
+            </article>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Completa el siguiente formulario y te responderemos pronto:</p>     
+            <form>
+                
+                <!-- Correo electronico -->
+                <label for="email">Correo electronico:</label><br>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required><br><br>
+                
+                <!-- Asunto -->
+                <label for="asunto">Asunto:</label><br>
+                <input type="text" id="asunto" name="asunto" placeholder="Escribe el asunto" required><br><br>
+                
+                 <!-- Comentario -->
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" name="comentario" rows="5" placeholder="Escribe tu mensaje..." required></textarea><br><br>
+                <button class="contact-btn">enviar</button>                
+            </form>            
+        </section>
+
+
+        <section id="articulos">
+            <article>
+                <h2>autitos</h2>
+                <p>
+                    El automóvil fue creado a través de varias etapas. Se inició con inventos de vehículos a 
+                    vapor como el de Nicolas-Joseph Cugnot en 1770
+                </p>
+                <a href="#">mas informacion..></a>
+            </article>
+
+            <article>
+                <h2>trenes</h2>
+                <p>
+                    El tren se creó como una evolución de antiguos 
+                    sistemas de transporte sobre carriles, 
+                    siendo Richard Trevithick quien construyó la primera locomotora a vapor en 1802
+                </p>
+                <a href="#"> mas info...</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+    <div>
+        <p>Contacto: contacto@bootcampudd.com | +56 9 1234 5678</p>
+        <p>Dirección: Av.Grecia 2001, Ñuñoa, Chile</p>
+        <p>2025 Clase 10: Estilos con CSS - Todos los derechos reservados</p>
+    </div>        
+    </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* Selectores de CSS 
+
+Jerarquías:
+    - Principio de Especifidad -> Lo especifico prima por sobre lo general
+    - Regla de la cascada -> Ante igual especificad gana el último en llegar
+
+
+Etiqueta -> Que solo llama a la etiqueta en cuestión 001
+
+Clases -> Selector especfico que se invoca a traves del atributo class, Siempre se invocan con un punto antes 010
+
+ID -> Este es el selector más especifco y se invoca con el signo # y el atributo id en la etiqueta 100
+
+*/
+
+:root { /* Selector de raíz - Este se usa para definir variables */
+    --primary-color-900: #1d1d45;
+    --primary-color-400: #5d79b3;
+    --secondary-color-500: #F33052;
+
+    --neutral-white: #f5f5f5;
+
+    --title-font: 'Open Sans', sans-serif;
+    --body-font: 'Montserrat', Verdana;
+
+    --line-default-height: 1.5
+
+}
+
+html { /* Selector de etiqueta global o universal - Para modificar tamaños */
+
+    font-size: 16px; /* 16por defecto */
+
+}
+
+* { /* Selector Universal Siempre tenemos que ponerlo*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(-90deg, var(--primary-color-900), var(--primary-color-400) );
+    color: var(--neutral-white);
+    font-family: var(--body-font);
+    line-height: var(--line-default-height)
+}
+
+nav {
+    padding: 2rem;
+
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+
+    backdrop-filter: blur(20px);
+}
+
+nav img {
+    border-radius: 50%
+}
+
+ nav img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px var(--secondary-color-500);
+ }
+
+.navbar-items {
+    gap: 2rem;
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flex-between-center {
+    justify-content: space-between;
+    /*Maneja el eje X de flex*/
+    align-items: center;
+    /*Maneja el eje Y de flex */
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: inherit
+}
+
+
+.navbar-item:hover {
+    transform: scale(1.08);
+    text-shadow: 0 0 15px #fff;
+}
+
+button {
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.transition3seg {
+    transition: .3s;
+}
+
+.login-btn {
+    background-color: var(--secondary-color-500);
+    color: var(--neutral-white);
+}
+
+.register-btn {
+    background-color: transparent;
+    color: var(--secondary-color-500);
+    text-shadow: var(--primary-color-900);
+    border: solid 2px;
+    font-weight: bold;
+}
+
+.login-btn:hover, .register-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px var(--secondary-color-500);
+}
+
+header {
+    height: 100vh;
+    background-image: url('../img/hero.jpg');
+
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-size: 4rem;
+    color: var(--secondary-color-500);
+}
+
+
+header p {
+    font-size: 2rem
+}
+
+main {
+    width: 80%;
+    margin: 0 auto
+}
+/*
+Unidades Absolutas
+px
+pt
+cm
+mm
+in
+pic
+
+
+Unidades Relativas
+em -> Unidad relativa con respecto al padre
+rem -> Unidad relativa con respecto a la raíz -> Por defecto el tamaño es de 16px
+%
+vh -> View Heigth
+vw -> View Width
+ch
+x
+
+/*
