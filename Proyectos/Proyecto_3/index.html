@@ -1,33 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav></nav>
-    </header>
-    <main>
-        <img src="" alt="">
-    </main>
-    <!-- aca comienzan los productos-->
-<product>
-<div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MisterChispeza | Soluciones Eléctricas</title>
+  <link rel="icon" href="imagenes/favicon.png">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <ol>
-        <li>
-            producto 1
-        </li>
-        <li>
-            oroducto 2
-        </li>
-    </ol>
-</div>
-</product>
-<footer>
-    copyright 2025 - C20
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="./assets/imagenes/logo.png" alt="MisterChispeza Logo" class="me-2">
+        <!-- MisterChispeza | Electricidad y Electrónica -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="inicio" class="hero d-flex align-items-center text-start text-light">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Soluciones Eléctricas y Electrónicas</h1>
+    <p class="lead">Para Industria, Comercio y Residenciales ⚡</p>
+    <a href="#contacto" class="btn btn-warning btn-lg">Contactate con Nosotros</a>
+  </div>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section id="nosotros" class="py-5">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-md-7 mb-4 align-self-center">
+          <img src="./assets/imagenes/nosotros.png" alt="Sobre MisterChispeza">
+        </div>
+        <div class="col-md-5 align-self-center ">
+          <h2 class="fw-bold mb-5">Somos Expertos en Instalaciones Electricas</h2>
+          
+          <p class="mb-4">
+            En <strong>MisterChispeza</strong> brindamos soluciones eléctricas seguras, confiables y con garantía de calidad.
+            Nuestro equipo de técnicos está listo para atender tus proyectos residenciales, comerciales o industriales.
+          </p>
+          <p>
+            Queremos brindarte el mejor servicio adaptado a tus necesidades, con los más altos estándares de seguridad, cumpliendo con la norma eléctrica chilena.
+          </p>
+          <p>
+            Contamos con un Equipo de Trabajo Profesional y Capacitado, con amplia experiencia en el rubro eléctrico y electrónico, con formación en las mejores instituciones de la quinta región.
+          </p>
+        <img src="./assets/imagenes/nosotros-2.png" alt="Equipo de trabajo MisterChispeza" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-5 fw-bold">Nuestros Servicios</h2>
+      <div class="row">
+        <div class="col-md-6 mb-2">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Ingeniería y Diseño</h5>
+              <p class="card-text">Realizamos instalaciones seguras para hogares, oficinas y negocios, cumpliendo con todas las normas SEC y NCH 2021 con sus respectivos pliegos RIC.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Mantenimiento Preventivo y Correctivo</h5>
+              <p class="card-text">Evita fallas eléctricas en tus circuitos y Equipos Electricos con nuestros servicios de mantenimiento periódico.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Instalacion de Equipos y Redes</h5>
+              <p class="card-text">Instalación de Acometidas, Tableros, Arranques, Variadores, Canalizacion y Cableado en Todo Tipo de Emplazamiento, Provisorios o Definitivos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Venta de Equimpamiento y Materiales</h5>
+              <p class="card-text">Ofrecemos todo tipos de Equipos y Materiales Electricos para llevar a cabo todos tus proyectos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- ===== CONTACTO ===== -->
+<section id="contacto" class="py-5 bg-dark text-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold mb-4">Contáctanos</h2>
+      <p class="mb-3">Completa el siguiente formulario y te responderemos lo antes posible ⚡</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="p-4 rounded shadow bg-light text-dark">
+          <div class="mb-3">
+            <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label fw-semibold">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
+          </div>
+          <div class="text-center">
+			<button type="submit" class="btn btn-warning px-4">
+				<i class="bi bi-send"></i> Enviar mensaje
+			</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <!-- Contacto -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Contacto</h5>
+        <p class="mb-1"><i class="bi bi-envelope"></i> contacto@misterchispeza.com</p>
+        <p class="mb-1"><i class="bi bi-telephone"></i> +56 9 1234 5678</p>
+        <p><i class="bi bi-whatsapp"></i> WhatsApp disponible 24/7</p>
+      </div>
+
+      <!-- Ubicación -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Ubicación</h5>
+        <p class="mb-1"><i class="bi bi-geo-alt"></i> Valparaíso, Chile</p>
+        <p><i class="bi bi-clock"></i> Lunes a Viernes: 9:00 - 18:00</p>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Síguenos</h5>
+        <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-tiktok fs-4"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-linkedin fs-4"></i></a>
+      </div>
+    </div>
+
+    <hr class="border-secondary">
+
+    <div class="text-center small">
+      <p class="mb-0">© 2025 MisterChispeza. Todos los derechos reservados.</p>
+    </div>
+  </div>
 </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
