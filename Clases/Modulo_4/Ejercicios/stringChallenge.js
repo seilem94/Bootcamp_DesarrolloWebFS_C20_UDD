@@ -30,16 +30,25 @@ const StringChallenge = (str) => {
     //Si la cadena es correcta, se procede a comprobar las condiciones para retornar true o false.
     //Utilizamos el arreglo 'grupos' para validar cada grupo de números.
     const grupos_parsed = grupos.map(grupo => parseInt(grupo, 10));
-    grupo_1 = grupos_parsed[0];
-    grupo_2 = grupos_parsed[1];
-    grupo_3 = grupos_parsed[2];
+    const grupo_1 = grupos_parsed[0].split("");
+    const grupo_2 = grupos_parsed[1].split("");
+    const grupo_3 = grupos_parsed[2].split("");
 
     const ultimoDigitoMayor = (grupo) => {
         (grupo[2] > grupo[1] && grupo[2] > grupo[0]) ? true : false;
     } 
     if (ultimoDigitoMayor(grupo_1) && ultimoDigitoMayor(grupo_2) && ultimoDigitoMayor(grupo_3)) { //Verificacion Condicion 4
-
-
+        if ((grupo_1[0]+grupo_1[1]+grupo_1[2]) % 2 === 0 && (grupo_2[0]+grupo_2[1]+grupo_2[2]) % 2 !== 0) { //Verificacion Condicion 2 y 3
+            console.log("true");
+            return true;
+        }
+        else {
+            console.log("false");
+            return false;
+        }
+    else {
+        console.log("false");
+        return false;
     };
 }
 // 🔹 Captura argumento desde consola
