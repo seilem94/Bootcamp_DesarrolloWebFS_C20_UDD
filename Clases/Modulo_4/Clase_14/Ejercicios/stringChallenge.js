@@ -46,10 +46,11 @@ const StringChallenge = (str) => {
             console.log("false");
             return false;
         }
+    }
     else {
         console.log("false");
         return false;
-    };
+    }   
 }
 // 🔹 Captura argumento desde consola
 //const entrada = process.argv[2];
