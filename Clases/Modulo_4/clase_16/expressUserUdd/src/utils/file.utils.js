@@ -43,6 +43,17 @@ export const escribirArchivo = async(rutaArchivo, data) => {
     }
 }
 
+
+//JSDocs
+/**
+ * Resumen - Esta función crea un archivo en la ruta especificada con la data enviada
+ * en formato Objeto o JSON
+ * @param {*} rutaArchivo - Ruta de donde se quiere crear el archivo de destino 
+ * @param {*} data - Datos a escribir en el archivo. Puede ser un Array
+ * @return {Promise<void>} Promesa que se resuelve cuando el archivo ha sido creado
+ * @throws {Error} Lanza un error si ocurre un problema al crear el archivo
+ * 
+ */
 export const crearArchivo = async(rutaArchivo, data) => {
     try {
         await asegurarRuta(rutaArchivo);
